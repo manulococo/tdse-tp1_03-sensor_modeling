@@ -44,7 +44,7 @@ extern "C" {
 #endif
 
 /********************** inclusions *******************************************/
-
+#include <stdint.h>
 /********************** macros ***********************************************/
 
 /********************** typedef **********************************************/
@@ -55,7 +55,7 @@ extern volatile uint32_t g_task_sensor_tick;
 
 /********************** external functions declaration ***********************/
 void task_sensor_init(void *parameters);
-void task_csensor_update(void *parameters);
+void task_sensor_update(void *parameters);
 
 /********************** End of CPP guard *************************************/
 #ifdef __cplusplus

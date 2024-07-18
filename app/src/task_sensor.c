@@ -52,8 +52,8 @@
 /********************** macros and definitions *******************************/
 #define G_TASK_SENSOR_CNT_INIT	0u
 
-#define DELAY_INI					0u
-#define DELAY	_MAX					50u
+#define DELAY_INI			0u
+#define DELAY_MAX			50u
 
 #define BTN_XX_DEL_MAX		DELAY_MAX
 #define BTN_XX_DEL_MIN		DELAY_INI
@@ -62,27 +62,46 @@
 task_sensor_st_t state;
 task_sensor_ev_t event;
 
+
+/*
+ * 	+-----------+-------+------+
+ * 	|	 ID		|Arduino| Pin  |
+ * 	|-----------+-------+------+
+ *  | ID_BTN_S1 |  D2   | PA10 |
+ *  |-----------+-------+------|
+ *  | ID_BTN_S2 |  D4   | PB5  |
+ *  |-----------+-------+------|
+ *  | ID_BTN_S3 |  D5   | PB4  |
+ *  |-----------+-------+------|
+ *  | ID_BTN_S4 |  D6   | PB10 |
+ *  |-----------+-------+------|
+ *  | ID_BTN_K1 |  D7   | PA8  |
+ *  |-----------+-------+------|
+ *  | ID_BTN_K2 |  D8   | PA9  |
+ *  |-----------+-------+------|
+ *
+ */
 const task_sensor_cfg_t task_sensor_cfg_list[] =
 
-	{{ID_BTN_S1, BTN_S1_PORT, BTN_S1_PIN, BTN_S1_PRESSED,
+	{{ID_BTN_S1, BUTTON_S1_PORT, BUTTON_S1_PIN, BUTTON_PRESSED,
 	  BTN_XX_DEL_MAX, SIG_BTN_S1_UP, SIG_BTN_S1_DOWN},
 
-	 {ID_BTN_S2, BTN_S2_PORT, BTN_S2_PIN, BTN_S2_PRESSED,
+	 {ID_BTN_S2, BUTTON_S2_PORT, BUTTON_S2_PIN, BUTTON_PRESSED,
 	  BTN_XX_DEL_MAX, SIG_BTN_S2_UP, SIG_BTN_S2_DOWN},
 
-	 {ID_BTN_S3, BTN_S3_PORT, BTN_S3_PIN, BTN_S3_PRESSED,
+	 {ID_BTN_S3, BUTTON_S3_PORT, BUTTON_S3_PIN, BUTTON_PRESSED,
 	  BTN_XX_DEL_MAX, SIG_BTN_S3_UP, SIG_BTN_S3_DOWN},
 
-	 {ID_BTN_S4, BTN_S4_PORT, BTN_S4_PIN, BTN_S4_PRESSED,
+	 {ID_BTN_S4, BUTTON_S4_PORT, BUTTON_S4_PIN, BUTTON_PRESSED,
 	  BTN_XX_DEL_MAX, SIG_BTN_S4_UP, SIG_BTN_S4_DOWN},
 
-	 {ID_BTN_K1, BTN_K1_PORT, BTN_K1_PIN, BTN_K1_PRESSED,
+	 {ID_BTN_K1, BUTTON_K1_PORT, BUTTON_K1_PIN, BUTTON_PRESSED,
 	  BTN_XX_DEL_MAX, SIG_BTN_K1_UP, SIG_BTN_K1_DOWN},
 
-	 {ID_BTN_K2, BTN_K2_PORT, BTN_K2_PIN, BTN_K2_PRESSED,
+	 {ID_BTN_K2, BUTTON_K2_PORT, BUTTON_K2_PIN, BUTTON_PRESSED,
 	  BTN_XX_DEL_MAX, SIG_BTN_K2_UP, SIG_BTN_K2_DOWN},
 
-     {ID_BTN_A,  BTN_A_PORT,  BTN_A_PIN,  BTN_A_PRESSED,
+     {ID_BTN_A,  BUTTON_A_PORT,  BUTTON_A_PIN,  BUTTON_PRESSED,
 	  BTN_XX_DEL_MAX, SIG_BTN_A_UP,  SIG_BTN_A_DOWN}};
 
 #define SENSOR_CFG_QTY	(sizeof(task_sensor_cfg_list)/sizeof(task_sensor_cfg_t))

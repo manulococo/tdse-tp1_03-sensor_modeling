@@ -88,10 +88,18 @@ extern "C" {
 
 #define BUTTON_A_PIN	B1_Pin
 #define BUTTON_A_PORT	B1_GPIO_Port
-#define BUTTON_B_PIN	B1_Pin
-#define BUTTON_B_PORT	B1_GPIO_Port
-#define BUTTON_C_PIN	B1_Pin
-#define BUTTON_C_PORT	B1_GPIO_Port
+#define BUTTON_S1_PIN	D2_Pin
+#define BUTTON_S1_PORT	D2_GPIO_Port
+#define BUTTON_S2_PIN	D4_Pin
+#define BUTTON_S2_PORT	D4_GPIO_Port
+#define BUTTON_S3_PIN	D5_Pin
+#define BUTTON_S3_PORT	D5_GPIO_Port
+#define BUTTON_S4_PIN	D6_Pin
+#define BUTTON_S4_PORT	D6_GPIO_Port
+#define BUTTON_K1_PIN	D7_Pin
+#define BUTTON_K1_PORT	D7_GPIO_Port
+#define BUTTON_K2_PIN	D8_Pin
+#define BUTTON_K2_PORT	D8_GPIO_Port
 
 #define BUTTON_PRESSED	GPIO_PIN_RESET
 #define BUTTON_HOVER	GPIO_PIN_SET

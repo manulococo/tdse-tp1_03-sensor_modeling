@@ -63,7 +63,7 @@ task_x_t task_x_init_list[]		= {{task_sensor_init, NULL}};
 
 #define TASK_X_INIT_QTY	(sizeof(task_x_init_list)/sizeof(task_x_t))
 
-task_x_t task_x_update_list[]	= {{task_sensor_update, NULL}};
+task_x_t task_x_update_list[]= {{task_sensor_update, NULL}};
 
 #define TASK_X_UPDATE_QTY	(sizeof(task_x_update_list)/sizeof(task_x_t))
 /********************** internal functions declaration ***********************/
